@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: debian
+
+    steps:
+      - checkout
+
+      - run:
+          name: install dependencies
+          command: |
+            apt update && apt install --yes $(cat .circleci/dependencies.list)
+
+      - run:
+          name: build packages
+          command: |
+            for package in $(find . -name Makefile); do
+              make --directory="$(dirname "$package")"
+            done
