@@ -15,6 +15,5 @@ jobs:
       - run:
           name: build packages
           command: |
-            for package in $(find . -name Makefile); do
-              make --directory="$(dirname "$package")"
-            done
+            make --directory=./uva-seas-thesis
+            make --directory=./uva-seas-thesis/example
