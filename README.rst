@@ -12,3 +12,9 @@ package is designed to be easier to use than other packages that mix content
 and presentation; specifically, this package is interoperable with a variety of
 LaTeX classes (e.g., book) that control most of the actual formatting
 decisions.
+
+.. attention::
+   Development has moved to the latex-virginia.edu_ repository, and this
+   repository has been archived!
+
+.. _latex-virginia.edu: https://github.com/joel-coffman/latex-virginia.edu/
